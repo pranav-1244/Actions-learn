@@ -1,12 +1,11 @@
-name: manual pushing 
+name: Sheduling of task 
 on: 
-  workflow_dispatch
+  schedule:
+    - cron: '*/5 * * * *'
 jobs:
-  Run-manually:
+  schedule:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repository
-      run: actions/checkoutv4
     - name: Info
       run: |
         echo "This the first time im using actions"
