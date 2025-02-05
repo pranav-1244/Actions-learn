@@ -1,0 +1,9 @@
+name: push event
+on: push
+jobs:
+  show-info:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Info
+      run: |
+        echo "This the first time im using actions"
