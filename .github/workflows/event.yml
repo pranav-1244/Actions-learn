@@ -1,12 +1,18 @@
 name: manual trigger
 on: 
-  issues:
-    types:
-      -  opened
+  workflow_dispatch:
+    inputs:
+      param1:
+        description: 'discription for param1'
+        required: true
+        default: hello-world
+        
 jobs:
   manual:
     runs-on: ubuntu-latest
     steps:
-    - name: Info
+    - name: checkout repository
+      uses: actions/checkout@v4  
+    - name: run a manual task
       run: |
-        echo "This the second time im using actions"
+        echo "this the parameter with is gonna be entered: ${{ github.events.inputs.param1}}"
