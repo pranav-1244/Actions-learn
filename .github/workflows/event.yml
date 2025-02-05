@@ -1,12 +1,12 @@
 name: manual trigger
 on: 
-  workflow_dispatch:
+  issues:
+    types:
+      -  opened
 jobs:
   manual:
     runs-on: ubuntu-latest
     steps:
-    - name: checkout repository
-      uses: actions/checkout@v4
     - name: Info
       run: |
         echo "This the second time im using actions"
