@@ -1,11 +1,12 @@
-name: push event
+name: manual pushing 
 on: 
-  schedule:
-    - cron: '*/5 * * * *'
+  workflow_dispatch
 jobs:
-  show-info:
+  Run-manually:
     runs-on: ubuntu-latest
     steps:
+    - name: checkout repository
+      run: actions/checkoutv4
     - name: Info
       run: |
         echo "This the first time im using actions"
