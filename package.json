@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "build": "echo 'No build step needed'",
-    "test": "echo 'No test specified' && exit 1"
+    "test": "echo 'No tests yet, but exit with success' && exit 0"
+
   },
   "dependencies": {},
   "devDependencies": {},
