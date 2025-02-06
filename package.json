@@ -1,14 +1,15 @@
 {
   "name": "nodejs-hello-world",
   "version": "1.0.0",
-  "description": "A simple Node.js Hello World server",
-  "main": "app.js",
+  "description": "A simple Node.js project",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "build": "echo 'No build step needed for this project'"
-    "test": "echo 'No test step needed for this project'"
+    "start": "node index.js",
+    "build": "echo 'No build step needed'",
+    "test": "echo 'No test specified' && exit 1"
   },
   "dependencies": {},
+  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0"
   }
