@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: 14
       - name: install npm
-        run: install npm
+        run: npm install
       - name: install dependance
         run: npm ci
       - name: build
@@ -27,7 +27,7 @@ jobs:
         with: 
           node-version: 14
       - name: install npm
-        run: install npm
+        run: npm install
       - name: install dependance
         run: npm ci
       - name: test code
