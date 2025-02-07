@@ -18,5 +18,5 @@ jobs:
         run: npm run build
       - name: deploy
         run: run npm deploy
-        if: github.ref == 'refs/heads/main' && github.event_name = 'push
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         
