@@ -1,0 +1,25 @@
+name: matrix example
+on: 
+  push:
+    branches: 
+      - main
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-22.04, ubuntu-20.04]
+        node: [18, 20]
+    runs-on: ${{ matrix.os }}
+    steps:
+    - name: checkout repo
+      uses: actions/checkout@v4
+    - name: setup node
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node }}
+    - name: install dependance
+      run: npm install
+    - name: deploy the code
+      run: npm run deploy
+         
+      
