@@ -2,9 +2,9 @@
   "name": "nodejs-hello-world",
   "version": "1.0.0",
   "description": "A simple Node.js project",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node app.js",
     "build": "echo 'No build step needed'",
     "test": "echo 'No tests yet, but exit with success' && exit 0",
     "deploy": "echo 'Deploying application...' && npm start"
