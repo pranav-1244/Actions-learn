@@ -7,6 +7,7 @@
     "start": "node index.js",
     "build": "echo 'No build step needed'",
     "test": "echo 'No tests yet, but exit with success' && exit 0"
+    "deploy": "echo 'Deploying application...' && npm start"
 
   },
   "dependencies": {},
