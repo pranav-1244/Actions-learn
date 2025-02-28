@@ -11,7 +11,7 @@ jobs:
       greeting: welcome to
     steps:
       - name: prinitng
-        run: echo $greeting $cloud $name
+        run: echo $greeting $cloud $name ${{ var.Add }}
         env:
           name: pranav
             
