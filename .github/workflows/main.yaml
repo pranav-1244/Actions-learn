@@ -1,23 +1,12 @@
-name: adding numbers
-on: 
-  workflow_dispatch:
-    inputs:
-      number1:
-        description: 'first number'
-        default: '0'
-        required: true
-      number2:
-        description: 'second number'
-        default: '0'
-        required: true
+name: Using secrets
+on:
+  workflow_dispatch
+env:
+  ACTIONS_STEP_DEBUG: true
 jobs:
-  add:
-    runs-on: ubuntu-latest
-    steps:
-      - name: adding the numbers
-        id: sum
-        run: echo "::set-output name=sum::$((${{ inputs.number1 }} + ${{ inputs.number2 }} ))"
-      - name: display the output
-        run: echo "The output for adding ${{inputs.number1 }} and ${{ inputs.number2 }} is ${{ steps.sum.outputs.sum }}"
-  
-
+  secrets:
+   runs-on: ubuntu-latest
+   steps:
+     - name: using secrets
+       run: |
+         echo " secret value = ${{ secrets.MY_KEY }}"
