@@ -1,22 +1,19 @@
-name: nodejs CI
-on: [push]
+name: testing
+on: 
+  push:
+  workflow_dispatch:
+env:
+  cloud: AWS
 jobs:
-  build: 
-    runs-on: ubuntu-latest 
+  welcome:
+    runs-on: ubuntu-latest
+    env:
+      greeting: welcome to
     steps:
-      - name: checkout code
-        uses: actions/checkout@v4
-      - name: setup node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-      - name: install npm
-        run: npm install
-      - name: install dependance
-        run: npm ci
-      - name: build
-        run: npm run build
-      - name: deploy
-        run: npm run deploy
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+      - name: prinitng
+        run: echo $greeting $cloud $name
+        env:
+          name: pranav
+            
+    
         
